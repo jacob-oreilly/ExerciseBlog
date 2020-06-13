@@ -4,18 +4,35 @@ import {
   CardActionArea,
   CardMedia,
   CardContent,
+  Typography,
+  makeStyles,
 } from "@material-ui/core";
+import "./PreviewCard.css";
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 300,
+  },
+  media: {
+    height: 120,
+  },
+});
 
 function PreviewCard() {
+  const classes = useStyles();
+
   return (
-    <Card>
+    <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia />
+        <CardMedia className={classes.media} image="" title="Cool photo" />
         <CardContent>
-          <p>
-            stuffff dfo ewoihjfoijsdlkfjfoiwej mfdsoiu foiewlkdsjf oiewjfl
-            dsajfi0ew
-          </p>
+          <Typography gutterBottom variant="h5" component="h2">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
         </CardContent>
       </CardActionArea>
     </Card>

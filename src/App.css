@@ -1,5 +1,11 @@
+body {
+  margin: 50px;
+}
+
 .card-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  width: 75%;
+  grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+  grid-gap: 50px 10%;
 }
